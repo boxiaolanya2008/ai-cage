@@ -33,6 +33,23 @@ See [architecture](docs/architecture.md), [mihomo API](docs/mihomo-api.md), and 
 - An official mihomo executable for independent sidecar mode
 - Clash Verge with External Controller enabled for Verge mode (commonly `127.0.0.1:9097`; it may be disabled by default)
 
+## Project structure
+
+```text
+main.go                 program entry, Wails app and tray
+internal/app            Wails service and business orchestration
+internal/config         settings and application list persistence
+internal/subscription   subscription download, limits, validation, cache
+internal/mihomo         config merge, Controller client, sidecar process
+internal/core           elevated supervisor, loopback IPC, lifecycle
+internal/verge          read-only Clash Verge snapshot import
+internal/launcher       ordinary application launch
+internal/sandbox        native host window that embeds the app window
+internal/model          shared data structures
+frontend                React UI; bindings are generated, not hand-written
+docs                    architecture, API, TUN, development, testing, release
+```
+
 ## Development
 
 ```bash
@@ -62,6 +79,7 @@ TUN captures network traffic; it does not remove an application's sandbox or int
 ## Documentation
 
 - [Development guide](docs/development.md)
+- [Frontend and UI conventions](docs/frontend.md)
 - [Testing guide](docs/testing.md)
 - [Release guide](docs/release.md)
 - [中文说明](README-ZH.md)

@@ -47,10 +47,10 @@ Clash Verge 当前配置 ──只读──> internal/verge
 2. Sidecar 模式选择已下载订阅或 Verge 快照，合并 ai-cage 的 Controller、Secret、TUN 与 DNS 覆盖项。
 3. `internal/mihomo` 生成内置 `AI-CAGE` 代理组；启用“仅应用笼流量走代理”时，把应用列表和 ai-cage 自身的完整路径转换成 `PROCESS-PATH` 规则，并追加 `MATCH,DIRECT` 兜底。
 4. UI 将固定路径的启动请求交给 core；请求不包含内核 Secret。
-4. core 校验 mihomo 路径与 SHA-256，启动子进程并等待 `/version` 就绪。
-5. UI 使用运行时生成的 loopback Controller Secret 查询状态、代理组、流量和日志。
-6. 停止请求始终发送给 core，由持有 Job Object 的进程回收 mihomo 进程树。
-7. 用户显式点击“检测出口 IP”时，AI Cage 通过本地 mixed 端口请求外部 echo 服务；因 ai-cage 自身也在进程规则内，结果反映 `AI-CAGE` 当前节点出口。
+5. core 校验 mihomo 路径与 SHA-256，启动子进程并等待 `/version` 就绪。
+6. UI 使用运行时生成的 loopback Controller Secret 查询状态、代理组、流量和日志。
+7. 停止请求始终发送给 core，由持有 Job Object 的进程回收 mihomo 进程树。
+8. 用户显式点击“检测出口 IP”时，AI Cage 通过本地 mixed 端口请求外部 echo 服务；因 ai-cage 自身也在进程规则内，结果反映 `AI-CAGE` 当前节点出口。
 
 ## 权限边界
 
