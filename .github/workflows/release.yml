@@ -32,12 +32,12 @@ jobs:
         working-directory: frontend
         run: npm ci
 
-      - name: Run tests
-        run: go test ./...
-
       - name: Build frontend
         working-directory: frontend
         run: npm run build
+
+      - name: Run tests
+        run: go test ./...
 
       - name: Build Windows application
         shell: bash
