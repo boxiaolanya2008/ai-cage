@@ -1,0 +1,29 @@
+# Wails / Go
+.task
+.wails
+bin/
+frontend/dist/
+frontend/node_modules/
+*.test
+*.exe
+*.pdb
+*.ilk
+
+# Local agent state
+.zcode/
+.idea/
+.vscode/
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+
+# Local runtime data
+data/
+runtime/
+*.log

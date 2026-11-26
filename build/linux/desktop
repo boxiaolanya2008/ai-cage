@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=AI Cage
+Comment=Windows proxy and TUN workspace manager
+# The Exec line includes %u to pass the URL to the application
+Exec=/usr/local/bin/ai-cage.exe %u
+Terminal=false
+Type=Application
+Icon=ai-cage.exe
+Categories=Utility;
+StartupWMClass=ai-cage.exe
+
+ 

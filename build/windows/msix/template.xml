@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MsixPackagingToolTemplate
+    xmlns="http://schemas.microsoft.com/msix/packaging/msixpackagingtool/template/2022">
+    <Settings
+        AllowTelemetry="false"
+        ApplyACLsToPackageFiles="true"
+        GenerateCommandLineFile="true"
+        AllowPromptForPassword="false">
+    </Settings>
+    <Installer
+        Path="ai-cage.exe"
+        Arguments=""
+        InstallLocation="C:\Program Files\boxiaolanya2008\AI Cage">
+    </Installer>
+    <PackageInformation
+        PackageName="AI Cage"
+        PackageDisplayName="AI Cage"
+        PublisherName="CN=boxiaolanya2008"
+        PublisherDisplayName="boxiaolanya2008"
+        Version="0.1.0.0"
+        PackageDescription="Windows proxy and TUN workspace manager">
+        <Capabilities>
+            <Capability Name="runFullTrust" />
+            
+        </Capabilities>
+        <Applications>
+            <Application
+                Id="io.github.boxiaolanya2008.aicage"
+                Description="Windows proxy and TUN workspace manager"
+                DisplayName="AI Cage"
+                ExecutableName="ai-cage.exe"
+                EntryPoint="Windows.FullTrustApplication">
+                
+            </Application>
+        </Applications>
+        <Resources>
+            <Resource Language="en-us" />
+        </Resources>
+        <Dependencies>
+            <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.17763.0" MaxVersionTested="10.0.19041.0" />
+        </Dependencies>
+        <Properties>
+            <Framework>false</Framework>
+            <DisplayName>AI Cage</DisplayName>
+            <PublisherDisplayName>boxiaolanya2008</PublisherDisplayName>
+            <Description>Windows proxy and TUN workspace manager</Description>
+            <Logo>Assets\AppIcon.png</Logo>
+        </Properties>
+    </PackageInformation>
+    <SaveLocation PackagePath="ai-cage.msix" />
+    <PackageIntegrity>
+        <CertificatePath></CertificatePath>
+    </PackageIntegrity>
+</MsixPackagingToolTemplate>
