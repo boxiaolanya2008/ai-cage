@@ -2,7 +2,7 @@ name: windows-ci
 
 on:
   push:
-    branches: [main, feat/windows-mihomo-desktop]
+    branches: [main, 'feature/**']
   pull_request:
     branches: [main]
 
