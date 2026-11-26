@@ -39,6 +39,14 @@ npm --prefix frontend run build
 D:/go/bin/wails3.exe build
 ```
 
+`go test ./...` 会编译根包，而 `main.go` 用 `//go:embed all:frontend/dist` 打包界面。新克隆的仓库还没有 `frontend/dist`，直接跑测试会报 `pattern all:frontend/dist: no matching files found`。先执行 `npm --prefix frontend run build`，或按下面的顺序验证。
+
+```bash
+npm --prefix frontend run build
+go test ./...
+D:/go/bin/wails3.exe build
+```
+
 ## 独立内核准备
 
 1. 从官方发布获取目标架构的 `mihomo.exe`。
