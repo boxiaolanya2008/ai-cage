@@ -1,0 +1,13 @@
+# Normalize text files so gofmt and generated bindings do not fight CRLF on Windows.
+* text=auto
+
+*.go    text eol=lf
+*.ts    text eol=lf
+*.tsx   text eol=lf
+*.css   text eol=lf
+*.json  text eol=lf
+*.md    text eol=lf
+
+*.exe   binary
+*.ico   binary
+*.png   binary

@@ -45,10 +45,9 @@ export function Icon({ name, size = 18, className = '' }: { name: IconName; size
 
 export function BrandMark() {
   return <svg className="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-    <rect x="4" y="4" width="32" height="32" rx="11" fill="url(#brand-gradient)"/>
-    <path d="M14 12v16M26 12v16M14 16h12M14 24h12" stroke="white" strokeWidth="2.6" strokeLinecap="round"/>
-    <path d="M20 11v18" stroke="white" strokeOpacity=".45" strokeWidth="1.4"/>
-    <defs><linearGradient id="brand-gradient" x1="5" y1="3" x2="35" y2="38"><stop stopColor="#6ee7c1"/><stop offset="1" stopColor="#42a9df"/></linearGradient></defs>
+    <defs><linearGradient id="brand-gradient" x1="12" y1="11" x2="28" y2="29"><stop stopColor="#93f2d3"/><stop offset=".5" stopColor="#57d6b0"/><stop offset="1" stopColor="#4aa8e0"/></linearGradient></defs>
+    <path d="M18.3 12.2H13v15.6h5.3M21.7 12.2H27v15.6h-5.3" stroke="url(#brand-gradient)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+    <circle cx="20" cy="20" r="3.8" fill="url(#brand-gradient)"/>
   </svg>
 }
 

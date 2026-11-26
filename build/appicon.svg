@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024" role="img" aria-label="AI Cage">
+  <title>AI Cage</title>
+  <defs>
+    <linearGradient id="tile" x1="0.12" y1="0" x2="0.88" y2="1">
+      <stop offset="0" stop-color="#12202a"/>
+      <stop offset="0.55" stop-color="#0d171d"/>
+      <stop offset="1" stop-color="#080c11"/>
+    </linearGradient>
+    <linearGradient id="mark" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#93f2d3"/>
+      <stop offset="0.5" stop-color="#57d6b0"/>
+      <stop offset="1" stop-color="#4aa8e0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#57d6b0" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#57d6b0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sheen" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- tile -->
+  <rect width="1024" height="1024" rx="228" fill="url(#tile)"/>
+  <rect x="3" y="3" width="1018" height="1018" rx="226" fill="none" stroke="#ffffff" stroke-opacity="0.06" stroke-width="6"/>
+
+  <!-- soft light behind the mark -->
+  <circle cx="512" cy="500" r="370" fill="url(#glow)"/>
+  <circle cx="356" cy="300" r="520" fill="url(#glow)" opacity="0.55"/>
+
+  <!-- cage: two brackets -->
+  <g fill="none" stroke="url(#mark)" stroke-width="76" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M430 320 H388 A56 56 0 0 0 332 376 V648 A56 56 0 0 0 388 704 H430"/>
+    <path d="M594 320 H636 A56 56 0 0 1 692 376 V648 A56 56 0 0 1 636 704 H594"/>
+  </g>
+
+  <!-- node -->
+  <circle cx="512" cy="512" r="96" fill="url(#mark)"/>
+  <circle cx="478" cy="480" r="58" fill="url(#sheen)"/>
+</svg>

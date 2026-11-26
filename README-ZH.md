@@ -33,6 +33,23 @@ AI Cage 是 Windows 优先的本地代理工作台。它可以连接现有 Clash
 - 独立内核模式需要官方 mihomo 可执行文件
 - Verge 模式需要 Clash Verge 开启 External Controller（默认地址通常为 `127.0.0.1:9097`，默认可能关闭）
 
+## 项目结构
+
+```text
+main.go                 程序入口、Wails 应用与托盘
+internal/app            Wails 服务与业务编排
+internal/config         设置与应用列表持久化
+internal/subscription   订阅下载、限制、校验与缓存
+internal/mihomo         配置合并、Controller 客户端、sidecar 进程
+internal/core           提权 supervisor、loopback IPC 与生命周期
+internal/verge          只读导入 Clash Verge 快照
+internal/launcher       普通应用启动
+internal/sandbox        嵌入应用窗口的原生宿主窗口
+internal/model          跨层共享数据结构
+frontend                React 界面；绑定自动生成，不手改
+docs                    架构、API、TUN、开发、测试与发布文档
+```
+
 ## 开发
 
 ```bash
@@ -62,6 +79,7 @@ TUN 只接管网络，不会解除应用沙箱或完整性限制。应用启动�
 ## 文档
 
 - [开发指南](docs/development.md)
+- [前端与界面约定](docs/frontend.md)
 - [测试指南](docs/testing.md)
 - [发布指南](docs/release.md)
 - [English](README.md)

@@ -76,8 +76,15 @@ D:/go/bin/wails3.exe build
 
 - `mihomo-integration`：修改 Controller、配置合并、订阅或内核生命周期时使用。
 - `windows-release-testing`：修改提权、TUN、Job Object、托盘或发布流程时使用。
+- `frontend-ui`：修改 `frontend/`、Wails 绑定、界面文案、主题或新手教程时使用。
 
 读取 Skill 后必须继续读取其引用的文档，不能只看 `SKILL.md`。
+
+## AI 上下文文件
+
+- 本文件是通用工程规范。
+- `CLAUDE.md`、`GEMINI.md`、`CODEX.md` 只补充对应工具的工作方式，共享规则仍以本文件为准。
+- 修改架构或约束时，同步检查这些文件是否仍然准确。
 
 ## 安全与边界
 
